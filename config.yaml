@@ -1,0 +1,73 @@
+# Keep this file local. It contains no passwords; browser sessions live in .browser-data/.
+profile:
+  resume_path: "C:/Users/amank/Downloads/Aman_Kumar_Resume.pdf"
+  full_name: "Aman Kumar"              # Fill these once before using autofill
+  email: "amankumardz0@gmail.com"
+  phone: "+91 9079180508"
+  current_city: "Gurugram"
+  total_experience_years: 4.8
+  notice_period: "Immediate joiner"
+  current_ctc_lpa: "1117000"
+  expected_ctc_lpa: "https://www.linkedin.com/in/amankumardz/"
+  linkedin_url: ""
+  github_or_portfolio_url: ""
+  work_authorization: "India"
+
+search:
+  keywords:
+    - ".NET Developer"
+    - "Senior .NET Developer"
+    - "ASP.NET Core Developer"
+    - ".NET Backend Developer"
+    - "Full Stack .NET Developer"
+    - ".NET Azure Developer"
+    - ".NET Angular Azure"
+  locations: ["Gurugram", "Noida", "Delhi NCR", "Remote"]
+  min_experience_years: 4
+  max_experience_years: 6
+  max_results_per_keyword: 25
+  min_score: 75
+
+matching:
+  # A 0-100 fit: target role (40), stack overlap (40), location (10), experience (10).
+  # A job is skipped unless .NET / ASP.NET / DotNet appears in its title.
+  required_primary_title_keywords: [".net", "asp.net", "dotnet"]
+  target_title_keywords: [".net developer", "dotnet developer", "asp.net core", ".net backend", "full stack .net", ".net azure", "azure .net", ".net angular"]
+  resume_stack_keywords: ["asp.net core", "c#", "sql server", "azure devops", "web api", "clean architecture", "ci/cd", "azure", "angular"]
+  exclude_keywords:
+    - "insurance"
+    - "react only"
+    - "react"
+    - "frontend only"
+    - "angular only"
+    - "devops only"
+    - "cloud engineer"
+  preferred_locations: ["gurugram", "noida", "delhi", "ncr", "remote"]
+
+auto_apply:
+  minimum_match_percent: 75
+  # Explicitly enabled at your request. CAPTCHAs, required unanswered questions,
+  # missing profile values, or unfamiliar forms are logged as pending instead.
+  enabled: true
+
+runtime:
+  headless: false
+  action_delay_ms: 1300       # Deliberately conservative; increase if a site asks.
+  search_delay_seconds: 4
+  user_data_root: ".browser-data"
+  database_path: "data/jobs.sqlite3"
+  shortlist_html_path: "outputs/daily-shortlist.html"
+
+# Label fragments are matched against standard application inputs. Add/edit per site as needed.
+field_mapping:
+  full_name: ["full name", "name"]
+  email: ["email", "email address"]
+  phone: ["phone", "mobile", "phone number"]
+  current_city: ["current location", "city", "location"]
+  total_experience_years: ["total experience", "years of experience"]
+  notice_period: ["notice period", "availability"]
+  current_ctc_lpa: ["current ctc", "current salary"]
+  expected_ctc_lpa: ["expected ctc", "expected salary"]
+  linkedin_url: ["linkedin"]
+  github_or_portfolio_url: ["portfolio", "github"]
+  work_authorization: ["work authorization", "authorized to work"]
